@@ -54,8 +54,23 @@ function Mostrar(){
 }
 
 function Eliminar(id_t_calificaciones){
-alert("Estoes "+id_t_calificaciones);
+var id_t_calificaciones = "&id_t_calificaciones="+id_t_calificaciones;
+//alert(id_t_calificaciones);
 
+$.ajax({
+	type:"POST",
+	url:"eliminar_calificaciones.php",
+	dataType:'json',
+	data:id_t_calificaciones,
+	success: function(data){
+
+		 alert(data);
+		 location.reload();
+
+
+	}
+
+});
 
 
 }
