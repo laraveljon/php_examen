@@ -18,9 +18,55 @@
                      <td><?=$row_llenar_combo['calificacion']?></td>
                      <td><?=$row_llenar_combo['fecha_registro']?></td>
                      <td>
-                       <button>Editar</button></td>
 
-                     <td><input type="button" value="Borrar" onclick="Eliminar(<?=$id_ ?>);"></td>
+
+                       <div class="container" style="margin-top: 60px;">
+
+                       <input class="btn btn-info"  data-toggle="modal" data-target="#miventana" value="Mostrar Calificacion" onclick="Mostrar();">
+
+
+                       <div class="modal fade" id="miventana" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+                   <div class="modal-dialog">
+
+                    <div class="modal-content">
+                       <!-- HEADER -->
+                       <div class="modal-header">
+                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                          <h4>Modificar Calificacion</h4>
+                       </div>
+                       <!-- BODY-->
+                       <div class="modal-body">
+                         <!--form  method="post" onsubmit="return validarRegistro()"-->
+                         <form  method="post">
+
+                          <!--label for="usuarioRegistro">Usuario</label-->
+                          <select style="width: 150px;text-align:center;" id="id_materias" name="id_materias" class = "id_materias_">
+
+                          </select>
+                          <select style="width: 150px;text-align:center;" id="id_usuarios" name="id_usuarios" class = "id_usuarios_">
+
+                          </select>
+                          <input type="text" id="calificacion" name="calificacion">
+                          <input type="date" id ="fecha" name="fecha" step="1" min="2017-01-01" max="2017-12-31" value="<?php echo date("Y-m-d");?>">
+
+
+                           <input type="button" value="Registrar" onclick="Registrar();">
+
+                         </form>
+
+                       </div>
+                       <!-- FOOTER -->
+                       <!--input type="button" name="" value="Enviar" onclick="Enviar();"-->
+                    </div>
+
+                   </div>
+
+                   </div>
+                   </div>
+
+
+                     <td><input type="button" value="Borrar" class="btn btn-info"  onclick="Eliminar(<?=$id_ ?>);"></td>
 
                  </tr></table><center>;
 <?php
