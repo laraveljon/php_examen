@@ -47,7 +47,7 @@
                           <select style="width: 150px;text-align:center;" id="id_usuarios" name="id_usuarios" class = "id_usuarioEDIs_">
 
                           </select>
-                          <input type="text" id="calificacionEDI" name="calificacionEDI">
+                          <input type="text" id="calificacionEDI" name="calificacionEDI" >
                           <input type="date" id ="fechaEDI" name="fechaEDI" step="1" min="2017-01-01" max="2017-12-31" value="<?php echo date("Y-m-d");?>">
 
 

@@ -75,7 +75,7 @@ $.ajax({
 }
 
 function Mostrar_dat(id_t_calificaciones){
-	
+
 	var id_t_calificaciones = "&id_t_calificaciones="+id_t_calificaciones;
 	//alert(id_t_calificaciones);
 
@@ -90,6 +90,26 @@ function Mostrar_dat(id_t_calificaciones){
 		}
 		});
 
+		$.ajax({
+			type:"POST",
+			url:"llenar_usuario_edit.php",
+			data:id_t_calificaciones,
+			success	: function(response){
+
+				$('.id_usuarioEDIs_').html(response).fadeIn();
+
+			}
+			});
 
 
+			$.ajax({
+				type:"POST",
+				url:"llenar_calif_edit.php",
+				data:id_t_calificaciones,
+				success	: function(data){
+
+					$('#calificacionEDI').html(data);
+
+				}
+				});
 }
