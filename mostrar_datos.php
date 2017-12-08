@@ -51,7 +51,7 @@
                           <input type="date" id ="fecha" name="fecha" step="1" min="2017-01-01" max="2017-12-31" value="<?php echo date("Y-m-d");?>">
 
 
-                           <input type="button" value="Registrar" onclick="Registrar();">
+                           <input type="button" value="Modificar" onclick="Modificar();">
 
                          </form>
 
