@@ -72,5 +72,24 @@ $.ajax({
 
 });
 
+}
+
+function Mostrar_dat(id_t_calificaciones){
+	
+	var id_t_calificaciones = "&id_t_calificaciones="+id_t_calificaciones;
+	//alert(id_t_calificaciones);
+
+	$.ajax({
+		type:"POST",
+		url:"llenar_materia_edit.php",
+		data:id_t_calificaciones,
+		success	: function(response){
+
+			$('.id_materiasEDI_').html(response).fadeIn();
+
+		}
+		});
+
+
 
 }
