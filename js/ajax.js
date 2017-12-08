@@ -155,7 +155,7 @@ function Mod(){
 		success	: function(data){
 
 			alert(data);
-      	 //location.reload();
+      	 location.reload();
 		}
 		});
 

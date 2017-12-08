@@ -14,8 +14,7 @@ id_t_usuarios='$id_usuarios_EDI',
 calificacion='$calificacionEDI',
 fecha_registro='$fechaEDI'
 WHERE id_t_calificaciones =  '$id_' ";
-echo $query;
-echo "<br>";
+
 $resp = mysql_query($query);
 
 $respuesta = "";
