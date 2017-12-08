@@ -81,6 +81,17 @@ function Mostrar_dat(id_t_calificaciones){
 
 	$.ajax({
 		type:"POST",
+		url:"llenar_id_edit.php",
+		data:id_t_calificaciones,
+		success	: function(response){
+
+			$('#id_').val(response).fadeIn();
+
+		}
+		});
+
+	$.ajax({
+		type:"POST",
 		url:"llenar_materia_edit.php",
 		data:id_t_calificaciones,
 		success	: function(response){
@@ -123,4 +134,29 @@ function Mostrar_dat(id_t_calificaciones){
 
 					}
 					});
+}
+
+
+function Mod(){
+
+  var id_ = $("#id_").val();
+  var id_materiasEDI = $("#id_materiasEDI").val();
+  var id_usuarios_EDI = $("#id_usuarios_EDI").val();
+  var calificacionEDI = $("#calificacionEDI").val();
+  var fechaEDI = $("#fechaEDI").val();
+
+
+	var dataGral = "id_="+id_+"&id_materiasEDI="+id_materiasEDI+"&id_usuarios_EDI="+id_usuarios_EDI+"&calificacionEDI="+calificacionEDI+"&fechaEDI="+fechaEDI;
+    alert(dataGral);
+	$.ajax({
+		type:"POST",
+		url:"edit.php",
+		data:dataGral,
+		success	: function(data){
+
+			alert(data);
+      	 //location.reload();
+		}
+		});
+
 }

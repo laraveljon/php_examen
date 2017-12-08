@@ -39,19 +39,19 @@
                        <div class="modal-body">
                          <!--form  method="post" onsubmit="return validarRegistro()"-->
                          <form  method="post">
-
+                          <input type="text" name="id_" id="id_" readonly >
                           <!--label for="usuarioRegistro">Usuario</label-->
                           <select style="width: 150px;text-align:center;" id="id_materiasEDI" name="id_materiasEDI" class = "id_materiasEDI_">
 
                           </select>
-                          <select style="width: 150px;text-align:center;" id="id_usuarios" name="id_usuarios" class = "id_usuarioEDIs_">
+                          <select style="width: 150px;text-align:center;" id="id_usuarios_EDI" name="id_usuarios_EDI" class = "id_usuarioEDIs_">
 
                           </select>
                           <input type="text" id="calificacionEDI" name="calificacionEDI" >
                           <input type="date" id ="fechaEDI" name="fechaEDI" step="1" min="2017-01-01" max="2017-12-31" value="<?php echo date("Y-m-d");?>">
 
 
-                           <input type="button" value="Registrar" onclick="Registrar();">
+                           <input type="button" value="Actualizar" onclick="Mod();">
 
                          </form>
 
