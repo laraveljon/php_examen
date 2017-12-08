@@ -106,10 +106,21 @@ function Mostrar_dat(id_t_calificaciones){
 				type:"POST",
 				url:"llenar_calif_edit.php",
 				data:id_t_calificaciones,
-				success	: function(data){
+				success	: function(response,data){
 
-					$('#calificacionEDI').html(data);
+					$('#calificacionEDI').val(response).fadeIn();
 
 				}
 				});
+
+				$.ajax({
+					type:"POST",
+					url:"llenar_fecha_edit.php",
+					data:id_t_calificaciones,
+					success	: function(response,data){
+
+						$('#fechaEDI').val(response).fadeIn();
+
+					}
+					});
 }
